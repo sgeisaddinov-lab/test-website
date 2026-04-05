@@ -1,0 +1,8 @@
+# Videos — large files, not needed at runtime (frames/ folder is used instead)
+brand_assets/*.mp4
+
+# Temp frame previews
+.tmp_*.jpg
+
+# Workflow skill docs
+SKILL *.md
