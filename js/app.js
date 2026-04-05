@@ -133,16 +133,12 @@ function initLenis() {
 // ── Hero entrance ─────────────────────────────────────────────────────────
 function animateHeroIn() {
   const tl = gsap.timeline({ delay: 0.3 });
-  tl.to(".hero-word", {
-    opacity: 1,
-    y: 0,
-    stagger: 0.15,
-    duration: 1.1,
-    ease: "power3.out",
-  })
-  .to(".hero-tagline", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4")
-  .to(".hero-byline", { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, "-=0.3")
-  .to(".scroll-indicator", { opacity: 1, duration: 0.6 }, "-=0.2");
+  tl.to(".hero-badge",      { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" })
+    .to(".hero-byline",     { opacity: 1, y: 0, duration: 1.1, ease: "power3.out" }, "-=0.2")
+    .to(".hero-heading",    { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.5")
+    .to(".hero-tagline",    { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4")
+    .to(".hero-buttons",    { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, "-=0.4")
+    .to(".scroll-indicator",{ opacity: 1, duration: 0.6 }, "-=0.2");
 }
 
 // ── Hero → canvas transition (circle-wipe) ────────────────────────────────
